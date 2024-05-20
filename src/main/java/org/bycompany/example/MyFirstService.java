@@ -17,6 +17,8 @@ public class MyFirstService {
     private final MyFirstClass myFirstClass;
     @Value("${my.custom.property}")
     private String customProp;
+    @Value("${my.custom.property.int}")
+    private Integer customPropInt;
     @Value("${my.prop}")
     private String customPropAnotherFile;
     @Value("${my.prop.2}")
@@ -40,5 +42,9 @@ public class MyFirstService {
 
     public String getCustomPropAnotherFile2() {
         return customPropAnotherFile2;
+    }
+
+    public Integer getCustomPropInt() {
+        return customPropInt;
     }
 }

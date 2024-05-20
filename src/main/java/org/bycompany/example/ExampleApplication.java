@@ -14,6 +14,7 @@ public class ExampleApplication {
         MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
         System.out.println(myFirstService.tellAStory());
         System.out.println(myFirstService.getCustomProp());
+        System.out.println(myFirstService.getCustomPropInt());
         System.out.println(myFirstService.getCustomPropAnotherFile());
         System.out.println(myFirstService.getCustomPropAnotherFile2());
     }
