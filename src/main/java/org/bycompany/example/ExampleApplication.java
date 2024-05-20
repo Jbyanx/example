@@ -2,7 +2,7 @@ package org.bycompany.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+
 
 @SpringBootApplication
 public class ExampleApplication {
@@ -13,6 +13,9 @@ public class ExampleApplication {
 
         MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
         System.out.println(myFirstService.tellAStory());
+        System.out.println(myFirstService.getJavaVersion());
+        System.out.println(myFirstService.getOsName());
+        System.out.println(myFirstService.readProperty());
     }
 
 }
