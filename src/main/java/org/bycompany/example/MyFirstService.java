@@ -24,7 +24,7 @@ public class MyFirstService {
     @Value("${my.prop.2}")
     private String customPropAnotherFile2;
 
-    public MyFirstService(@Qualifier("myThirdBean") MyFirstClass myFirstClass) {
+    public MyFirstService(@Qualifier("bean1") MyFirstClass myFirstClass) {
         this.myFirstClass = myFirstClass;
     }
 
