@@ -1,9 +1,7 @@
 package org.bycompany.example;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class FirstController {
@@ -13,9 +11,18 @@ public class FirstController {
         return "Hello from my First controller";
     }
 
-    @GetMapping("/hello/2")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public String sayHello2(){
-        return "Hello 2 from my First controller";
+    @PostMapping("/post")
+    public String post(@RequestBody String message){
+        return "request accepted and message is : " + message;
+    }
+
+    @PostMapping("/post-order")
+    public String postOrder(@RequestBody Order order    ){
+        return "request accepted and order is : " + order.toString();
+    }
+
+    @PostMapping("/post-order-record")
+    public String postOrderRecord(@RequestBody OrderRecord orderRecord    ){
+        return "request accepted and order is : " + orderRecord.toString();
     }
 }
